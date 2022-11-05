@@ -1,6 +1,6 @@
 package model;
 
-public class Student {
+public class Student implements Comparable{
     private String name;
     private String surname;
     private String group;
@@ -50,5 +50,15 @@ public class Student {
                 ", exercise=" + exercise +
                 ", homework=" + homework +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof Student) {
+            Student student = (Student) o;
+            return this.surname.compareTo(((Student) o).surname);
+        }
+        else throw new IllegalArgumentException();
     }
 }
