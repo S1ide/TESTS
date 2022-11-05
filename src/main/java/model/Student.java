@@ -40,15 +40,4 @@ public class Student {
     public int getHomework() {
         return homework;
     }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", group='" + group + '\'' +
-                ", exercise=" + exercise +
-                ", homework=" + homework +
-                '}';
-    }
 }
